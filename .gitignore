@@ -110,3 +110,4 @@ cython_debug/
 .idea/
 tests/
 ui_tests/
+highscanner_cli.py

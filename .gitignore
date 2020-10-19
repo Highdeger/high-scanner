@@ -108,6 +108,4 @@ cython_debug/
 
 # by highdeger (can be deleted by everyone)
 .idea/
-tests/
-ui_tests/
-highscanner_cli.py
+test*.py

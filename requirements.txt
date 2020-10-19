@@ -1,0 +1,2 @@
+setuptools>=50.3.0
+scapy>=2.4.4

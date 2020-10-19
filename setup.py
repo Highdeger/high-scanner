@@ -1,18 +1,40 @@
-import setuptools
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-with open('README.md', 'r') as f:
-    lond_description = f.read()
+from setuptools import setup, find_packages
 
-setuptools.setup(
-    name='highscanner',
-    version='0.0.1',
-    author='Highdeger',
-    author_email='highdeger@gmail.com',
-    description='A simple port scanner with no dependencies',
-    long_description=lond_description,
+# Package meta-data
+NAME = 'highscanner'
+DESCRIPTION = 'A simple port scanner with no dependencies'
+URL = 'https://github.com/Highdeger/HighPortScanner'
+EMAIL = 'highdeger@gmail.com'
+AUTHOR = 'Highdeger'
+REQUIRES_PYTHON = '>=3.6.0'
+VERSION = None
+LICENSE = 'GPLv3'
+REQUIRED = []
+
+with open('README.md', mode='r') as f:
+    long_description = '\n' + f.read()
+
+about = {}
+if not VERSION:
+    with open('__version__.py', mode='r') as f:
+        exec(f.read(), about)
+else:
+    about['__version__'] = VERSION
+
+setup(
+    name=NAME,
+    version=about['__version__'],
+    author=AUTHOR,
+    author_email=EMAIL,
+    description=DESCRIPTION,
+    long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/Highdeger/HighPortScanner',
-    packages=setuptools.find_packages(),
+    url=URL,
+    packages=find_packages(),
+    license=LICENSE,
     classifiers=[
         'Development Status :: 1 - Planning',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
